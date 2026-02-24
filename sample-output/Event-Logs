@@ -1,0 +1,40 @@
+Home EDR Dashboard - Event Logs Analysis (Sanitized)
+
+Generated: [REDACTED_TIMESTAMP]
+Host: [REDACTED_HOSTNAME]
+Time Window: Last 24 Hours
+
+========================================
+SECURITY LOG SUMMARY
+========================================
+Information Events: 5000 (capped)
+
+Top Event IDs:
+- 4957
+- 5379
+- 4673
+- 4688
+- 4798
+
+========================================
+SYSTEM LOG SUMMARY
+========================================
+Critical: 1
+Error: 215
+Warning: 336
+Information: 3593
+
+Top Event IDs:
+- 7040
+- 1
+- 37
+- 16
+- 18
+
+========================================
+APPLICATION LOG SUMMARY
+========================================
+Application events analyzed.
+Detailed file paths and state markers have been redacted.
+
+END OF REPORT
