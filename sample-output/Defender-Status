@@ -1,0 +1,33 @@
+Windows Defender / Security Status (read-only)
+Generated: [REDACTED_TIMESTAMP]
+OutputDir: C:\Users\[REDACTED_USER]\Documents\[REDACTED_PROJECT]\reports\baseline
+
+Status: OK - Everything looks good
+
+Key signals:
+  - AntivirusEnabled: True
+  - RealTimeProtectionEnabled: True
+  - BehaviorMonitorEnabled: True
+  - IoavProtectionEnabled: True
+  - NISEnabled: True
+  - AMServiceEnabled: True
+  - EngineVersion: [REDACTED]
+  - SigVersion: [REDACTED]
+  - SigLastUpdated: [REDACTED]
+  - SigAgeHours: [REDACTED]
+
+Security Center AV products detected:
+  - Windows Defender
+
+Recent Defender detections: none.
+
+Selected preferences:
+  - PUAProtection: 1
+  - MAPSReporting: 2
+  - SubmitSamplesConsent: 1
+  - DisableRealtimeMonitoring: False
+  - DisableScriptScanning: False
+
+Reports written:
+  - TXT:  C:\Users\[REDACTED_USER]\Documents\[REDACTED_PROJECT]\reports\baseline\DefenderStatus_[REDACTED].txt
+  - JSON: C:\Users\[REDACTED_USER]\Documents\[REDACTED_PROJECT]\reports\baseline\DefenderStatus_[REDACTED].json
