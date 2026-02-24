@@ -1,0 +1,85 @@
+==== Health & Security Snapshot ====
+Host: [REDACTED_HOSTNAME]
+Time: [REDACTED_TIMESTAMP]
+Report: C:\Users\[REDACTED_USER]\Documents\[REDACTED_PROJECT]\reports\baseline\HealthSnapshot_[REDACTED].txt
+Running as Admin: True
+------------------------------------
+
+## Windows Update
+----------------------------------------
+Pending updates: 1
+Pending update details (up to 10):
+  - Security Intelligence Update for Microsoft Defender Antivirus - KB2267602
+Reboot required for updates: False
+Last Windows Update activity: [REDACTED_TIMESTAMP]
+
+Recently installed updates (last 5):
+  [REDACTED_DATE]  KB5075912  Security Update
+  [REDACTED_DATE]  KB5077456  Security Update
+  [REDACTED_DATE]  KB5072653  Security Update
+  [REDACTED_DATE]  KB5068780  Security Update
+  [REDACTED_DATE]  KB5066130  Update
+
+## System
+----------------------------------------
+OS: Microsoft Windows 10 Pro
+Version: 10.0.19045  Build: 19045
+Install Date: [REDACTED_DATE]
+Last Boot: [REDACTED_DATE]
+Uptime: [REDACTED]
+
+## Disk
+----------------------------------------
+Drive C:  Free: [REDACTED]
+Drive E:  Free: [REDACTED]
+
+## Windows Firewall
+----------------------------------------
+Profiles: Domain / Private / Public
+All Enabled: True
+Inbound: Block
+Outbound: Allow
+
+Enabled inbound rules:  [REDACTED_COUNT]
+Enabled outbound rules: [REDACTED_COUNT]
+
+## Windows Security / Defender
+----------------------------------------
+AMServiceEnabled: True
+AntivirusEnabled: True
+RealTimeProtectionEnabled: True
+BehaviorMonitorEnabled: True
+IsTamperProtected: True
+AntivirusSignatureLastUpdated: [REDACTED_TIMESTAMP]
+
+## Recent Errors/Warnings (last 24h)
+----------------------------------------
+Log entries present (details redacted for privacy)
+
+## Integrity Hashes (key files)
+----------------------------------------
+[REDACTED_HASH]  C:\WINDOWS\System32\drivers\etc\hosts
+[REDACTED_HASH]  C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+[REDACTED_HASH]  C:\Program Files\Windows Defender\MpCmdRun.exe
+
+## Network
+----------------------------------------
+Interfaces detected: [REDACTED]
+IP addresses: [REDACTED]
+
+## Listening Ports
+----------------------------------------
+Common system ports detected (details redacted)
+
+## Startup (high-level)
+----------------------------------------
+Startup entries detected under HKCU / HKLM (details redacted for user privacy)
+
+## Service Health (selected)
+----------------------------------------
+wuauserv: Running
+WinDefend: Running
+eventlog: Running
+BITS: Running
+
+==== End of Snapshot ====
