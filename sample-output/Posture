@@ -1,0 +1,69 @@
+Home EDR Dashboard - Security Posture Drift Report (Sanitized)
+
+Generated: [REDACTED_TIMESTAMP]
+Host: [REDACTED_HOSTNAME]
+Mode: Baseline Comparison
+
+============================================================
+OVERVIEW
+============================================================
+Scheduled Tasks Drift:
+  Added:   82
+  Removed: 0
+  Changed: 177
+
+Services Drift:
+  Added:   22
+  Removed: 22
+  Changed: 17
+
+Persistence Drift:
+  Removed Entries: 1
+  Added Entries: 0
+  Modified Entries: 0
+
+============================================================
+SCHEDULED TASK ANALYSIS (SUMMARY)
+============================================================
+- Numerous Windows Update orchestrator tasks updated
+- Defender platform version tasks updated
+- Edge updater tasks version incremented
+- Google updater tasks version incremented
+- Maintenance tasks detected
+- Several user-context scheduled tasks are disabled
+
+No suspicious non-Microsoft executables detected in system paths.
+
+============================================================
+SERVICE ANALYSIS (SUMMARY)
+============================================================
+- Defender platform version updated
+- Edge elevation service version updated
+- Chrome elevation service version updated
+- Proton VPN WireGuard service version updated
+- Windows Update-related services transitioned to Auto/Running
+- Some diagnostic services transitioned to Stopped
+
+No unsigned or unknown service binaries detected.
+
+============================================================
+PERSISTENCE ANALYSIS (SUMMARY)
+============================================================
+- One auto-launch browser entry removed
+- No new RunKey entries detected
+- No new Startup folder entries detected
+
+============================================================
+SECURITY INTERPRETATION
+============================================================
+Drift is primarily attributable to:
+- Windows platform updates
+- Defender engine update
+- Browser auto-update mechanisms
+- Third-party software version updates
+
+No indicators of malicious persistence or service injection observed.
+
+============================================================
+END OF REPORT
+============================================================
