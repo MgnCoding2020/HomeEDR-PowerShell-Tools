@@ -1,0 +1,58 @@
+Home EDR Dashboard - Network Audit (Sanitized)
+Generated: [REDACTED_TIMESTAMP]
+Host: [REDACTED_HOSTNAME]
+
+========================================
+NETWORK INTERFACES (SUMMARY)
+========================================
+Active Adapters: 2
+Virtual Adapters Detected: Yes
+Wireless Adapter Present: Yes
+Hyper-V Adapter Present: Yes
+Bluetooth Adapter Present: Yes
+
+========================================
+IP CONFIGURATION (SUMMARY)
+========================================
+Primary Interface: Wi-Fi
+Private IPv4 Address: [REDACTED_PRIVATE_IP]
+Default Gateway: [REDACTED_PRIVATE_GATEWAY]
+Loopback Present: Yes
+APIPA Addresses Detected: Yes
+
+========================================
+DNS CONFIGURATION
+========================================
+Custom DNS Servers Configured: Yes
+IPv6 DNS Present: Yes
+
+========================================
+FIREWALL STATUS
+========================================
+Domain Profile:  Enabled (Inbound Block / Outbound Allow)
+Private Profile: Enabled (Inbound Block / Outbound Allow)
+Public Profile:  Enabled (Inbound Block / Outbound Allow)
+
+========================================
+TCP LISTENING PORT SUMMARY
+========================================
+System Services Listening: Yes
+Hyper-V / Virtualization Ports: Present
+Local Development Services: Present
+SMB Ports: Present
+High Ephemeral Ports: Present
+
+========================================
+WIFI PROFILES
+========================================
+Saved Profiles Detected: Yes
+Profile Names: [REDACTED]
+
+========================================
+SUMMARY
+========================================
+Adapters Up : 2
+IP Entries  : 11
+
+Detailed IP addresses, MAC addresses, DNS cache entries,
+remote connections, and Wi-Fi SSIDs have been redacted.
