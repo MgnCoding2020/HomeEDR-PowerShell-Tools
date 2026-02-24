@@ -1,0 +1,32 @@
+[
+  {
+    "SourceScope": "HKCU",
+    "Location": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+    "Name": "CiscoMeetingDaemon",
+    "Command": "\"C:\\Users\\[REDACTED_USER]\\AppData\\Local\\WebEx\\WebexHost.exe\" /daemon /runFrom=autorun",
+    "TargetPath": "C:\\Users\\[REDACTED_USER]\\AppData\\Local\\WebEx\\WebexHost.exe",
+    "Publisher": "Cisco WebEx LLC",
+    "Risk": "UserWritablePath",
+    "Kind": "Run"
+  },
+  {
+    "SourceScope": "HKCU",
+    "Location": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+    "Name": "OneDrive",
+    "Command": "\"C:\\Users\\[REDACTED_USER]\\AppData\\Local\\Microsoft\\OneDrive\\OneDrive.exe\" /background",
+    "TargetPath": "C:\\Users\\[REDACTED_USER]\\AppData\\Local\\Microsoft\\OneDrive\\OneDrive.exe",
+    "Publisher": "Microsoft Corporation",
+    "Risk": "UserWritablePath",
+    "Kind": "Run"
+  },
+  {
+    "SourceScope": "HKLM",
+    "Location": "HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+    "Name": "SecurityHealth",
+    "Command": "C:\\WINDOWS\\system32\\SecurityHealthSystray.exe",
+    "TargetPath": "C:\\WINDOWS\\system32\\SecurityHealthSystray.exe",
+    "Publisher": "Microsoft Windows",
+    "Risk": "OK",
+    "Kind": "Run"
+  }
+]
