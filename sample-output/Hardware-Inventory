@@ -1,0 +1,62 @@
+HARDWARE INVENTORY REPORT (Sanitized)
+Generated : [REDACTED_TIMESTAMP]
+Host      : [REDACTED_HOSTNAME]
+
+========================================
+SYSTEM SUMMARY
+========================================
+Manufacturer  : [REDACTED_VENDOR]
+Model         : [REDACTED_MODEL]
+Total RAM     : 32 GB
+OS            : Microsoft Windows 10 Pro
+Build         : 19045
+
+========================================
+SECURITY HARDWARE
+========================================
+TPM Present   : Yes
+TPM Enabled   : True
+Secure Boot   : True
+
+========================================
+CPU
+========================================
+Architecture  : x64
+Cores         : 4
+Logical       : 8
+
+========================================
+GPU
+========================================
+Discrete GPU Present : Yes
+Integrated GPU Present: Yes
+
+========================================
+MEMORY
+========================================
+Slots Used: 2
+Total Installed: 32 GB
+Speed: 2400 MHz
+
+========================================
+STORAGE
+========================================
+Primary Disk Size: ~1 TB
+Filesystem: NTFS
+Boot Volume Present: Yes
+
+========================================
+NETWORK (ENABLED)
+========================================
+Wireless Adapter: Present
+Virtual Adapter: Present
+
+MAC addresses and hardware serial numbers have been redacted.
+
+========================================
+DRIVER SUMMARY
+========================================
+Signed Drivers Detected: Yes
+Driver Records: 169
+
+END OF REPORT
