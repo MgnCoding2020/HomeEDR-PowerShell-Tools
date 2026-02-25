@@ -1,0 +1,34 @@
+name: Generate Control Evidence
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "controls/nist-800-53-control-map.yaml"
+      - "controls/generate-control-evidence.ps1"
+      - "sample-output/**"
+      - "snapshots/**"
+      - "alerts/**"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run generator
+        shell: pwsh
+        run: |
+          pwsh ./controls/generate-control-evidence.ps1
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add CONTROL_EVIDENCE.md
+          git diff --cached --quiet || git commit -m "Auto-generate CONTROL_EVIDENCE.md"
+          git push
