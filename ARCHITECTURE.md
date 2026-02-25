@@ -143,7 +143,7 @@ This layered monitoring model reflects defense-in-depth principles.
 ## Design Principles
 
 ### Baseline-First Strategy
-Rather than reacting to alerts alone, the system continuously validates system state against a trusted configuration.
+Rather than reacting to alerts alone, the system continuously validates the system state against a trusted configuration.
 
 ### Separation of Concerns
 Baseline, snapshot, alert, and archive directories are intentionally segregated.
