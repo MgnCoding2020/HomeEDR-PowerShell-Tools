@@ -170,10 +170,6 @@ foreach ($controlKey in ($map.Keys | Sort-Object)) {
     }
 }
 
-$md += ""
-$md += "## Notes"
-$md += "- Add more controls over time as you add scripts and sample outputs."
-$md += "- Evidence artifacts are discovered by `output_path` + `artifact_pattern` in the YAML."
 
 Set-Content -Path $OutPath -Value ($md -join "`n") -Encoding UTF8
 Write-Host "Wrote: $OutPath"
