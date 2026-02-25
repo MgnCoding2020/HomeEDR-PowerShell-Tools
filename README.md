@@ -22,6 +22,18 @@ While preparing for CompTIA Network+ and Security+, I hardened my personal Windo
 
 The objective was not simply to automate scripts, but to build visibility and security reasoning into the system.
 
+## Quick Start
+
+Requirements:
+- Windows 10/11
+- PowerShell 5.1+
+- Run as Administrator (recommended for full visibility)
+
+Example:
+.\HealthSnapshot.ps1 -OutputDir C:\Reports
+
+Output will be written to the specified directory. Utilizing the Task Scheduler, you're able to set up automation and consistent monitoring for each script. 
+
 ---
 
 ## Core Design Model
