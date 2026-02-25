@@ -8,6 +8,4 @@ This file is auto-generated from controls/nist-800-53-control-map.yaml.
 | CM-6 | Configuration Settings | $script | **0 found** ($outRelServices_Drift_*.csv) |
 | CM-7 | Least Functionality | $script | **0 found** ($outRelInstalledSoftware_*.csv) |
 
-## Notes
-- Add more controls over time as you add scripts and sample outputs.
-- Evidence artifacts are discovered by output_path + rtifact_pattern in the YAML.
+
