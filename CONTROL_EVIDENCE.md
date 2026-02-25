@@ -7,5 +7,3 @@ This file is auto-generated from controls/nist-800-53-control-map.yaml.
 | AU-6 | Audit Review, Analysis, and Reporting | $script | **0 found** ($outRelSecurityEventLogSummary_*.txt) |
 | CM-6 | Configuration Settings | $script | **0 found** ($outRelServices_Drift_*.csv) |
 | CM-7 | Least Functionality | $script | **0 found** ($outRelInstalledSoftware_*.csv) |
-
-
