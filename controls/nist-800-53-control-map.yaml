@@ -1,0 +1,23 @@
+AU-6:
+  name: Audit Review, Analysis, and Reporting
+  description: Review and analyze audit logs.
+  evidence:
+    - script: SecurityEventLogSummary.ps1
+      output_path: snapshots/
+      artifact_pattern: SecurityEventLogSummary_*.txt
+
+CM-6:
+  name: Configuration Settings
+  description: Establish and enforce configuration settings.
+  evidence:
+    - script: ServicesDrift.ps1
+      output_path: alerts/
+      artifact_pattern: Services_Drift_*.csv
+
+CM-7:
+  name: Least Functionality
+  description: Limit system functionality to essential services.
+  evidence:
+    - script: InstalledSoftwareInventory.ps1
+      output_path: snapshots/
+      artifact_pattern: InstalledSoftware_*.csv
