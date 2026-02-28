@@ -30,7 +30,7 @@ The monitoring lifecycle consists of five phases:
 
 ## 1. Baseline Layer
 
-Directory: //baseline//
+Directory: /baseline/
 
 The baseline represents a trusted system state captured after hardening.
 
@@ -50,7 +50,7 @@ Baseline files serve as the reference dataset for all future comparisons.
 
 ## 2. Snapshot Layer
 
-Directory: //snapshots//
+Directory: /snapshots/
 
 Snapshots are generated via Windows Task Scheduler at defined intervals.
 
@@ -68,8 +68,8 @@ Snapshots are intentionally separated from baseline data to preserve integrity.
 
 Comparison logic performs structured diff operations between:
 
-//baseline/<component>.csv//
-//snapshots/<component>_<timestamp>.csv//
+/baseline/<component>.csv/
+/snapshots/<component>_<timestamp>.csv/
 
 Comparison categories include:
 
@@ -96,7 +96,7 @@ The comparison model is state-based rather than event-based.
 
 ## 4. Alert & Reporting Layer
 
-Directory: //alerts//
+Directory: /alerts/
 
 If drift is detected:
 
@@ -112,7 +112,7 @@ Sanitized versions in this repository reflect summary-form output for portfolio 
 
 ## 5. Retention & Archival
 
-Directory: //archive/<year>/<month>//
+Directory: /archive/<year>/<month>/
 
 To maintain long-term visibility without directory clutter:
 
