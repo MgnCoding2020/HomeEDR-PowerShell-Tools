@@ -23,7 +23,7 @@ jobs:
       - name: Run generator
         shell: pwsh
         run: |
-          pwsh ./controls/generate-control-evidence.ps1
+          pwsh ./controls/generate-control-evidence.ps1 -UseSampleOutput
 
       - name: Commit and push if changed
         run: |
