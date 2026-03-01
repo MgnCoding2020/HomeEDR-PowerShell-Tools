@@ -47,6 +47,9 @@ param(
   [switch]$UseSampleOutput
 )
 
+# Markdown inline-code delimiter (a literal backtick character)
+$bt = "`"
+
 function Read-MapYaml {
   param([string]$Path)
 
@@ -223,7 +226,7 @@ foreach ($controlKey in ($map.Keys | Sort-Object)) {
     }
 
     if ($found.Count -eq 0) {
-      $artifactText = "**0 found** (`$searchedNote`)"
+      $artifactText = "**0 found** ($bt$searchedNote$bt)"
       $missing += "$controlKey -> $searchedNote"
     } else {
       # Show up to 3 newest artifacts as clickable repo-relative links
@@ -240,7 +243,7 @@ foreach ($controlKey in ($map.Keys | Sort-Object)) {
     }
 
     # NOTE: We wrap $script in backticks *as code formatting*, not as escaped literal text.
-    $md += "| $controlKey | $controlName | `$script` | $artifactText |"
+    $md += "| $controlKey | $controlName | $bt$script$bt | $artifactText |"
   }
 }
 
