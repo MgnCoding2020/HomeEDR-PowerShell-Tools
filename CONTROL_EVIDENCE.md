@@ -2,7 +2,7 @@
 
 This file is auto-generated from controls/nist-800-53-control-map.yaml.
 
-> Mode: Repo paths (per YAML output_path)
+> Mode: Portfolio demo (sample-output/)
 
 | Control | Control Name | Evidence Script | Evidence Artifacts Found |
 |---|---|---|---|
