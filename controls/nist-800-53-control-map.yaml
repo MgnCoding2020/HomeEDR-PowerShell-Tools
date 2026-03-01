@@ -1,23 +1,33 @@
+# Audit and Accountability, Configuration Management, System and Communications Protection
+
 AU-6:
   name: Audit Review, Analysis, and Reporting
   description: Review and analyze audit logs.
   evidence:
-    - script: SecurityEventLogSummary.ps1
+    - script: EventLogs-Manager.ps1
       output_path: snapshots/
-      artifact_pattern: SecurityEventLogSummary_*.txt
+      artifact_pattern: Event-Logs*.txt
 
 CM-6:
   name: Configuration Settings
   description: Establish and enforce configuration settings.
   evidence:
-    - script: ServicesDrift.ps1
+    - script: HealthSnapshot.ps1
       output_path: alerts/
-      artifact_pattern: Services_Drift_*.csv
+      artifact_pattern: Health-Snapshot-Report*.txt
 
 CM-7:
   name: Least Functionality
   description: Limit system functionality to essential services.
   evidence:
-    - script: InstalledSoftwareInventory.ps1
+    - script: InstalledApps-Inventory.ps1
       output_path: snapshots/
-      artifact_pattern: InstalledSoftware_*.csv
+      artifact_pattern: Installed-Apps-Inventory*.txt
+
+SC-7:
+  name: Boundary Protection
+  description: Monitor and control communications at system boundaries.
+  evidence:
+    - script: Audit-Network.ps1
+      output_path: sample-output/
+      artifact_pattern: Network-Audit*.txt
