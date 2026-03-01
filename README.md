@@ -1,97 +1,118 @@
-# Home EDR – PowerShell Posture & Drift Monitoring
+# Home EDR – From Posture Monitoring to Governance Automation
 
-## Overview
+## What This Is
 
-Home EDR is a PowerShell-based endpoint posture monitoring and drift detection system designed for Windows environments.
+Home EDR started as a personal project while I was studying for Network+ and Security+.
 
-This project originated as a hands-on security exercise while studying for Network+ and Security+. The goal was to move beyond theory and implement practical defensive security automation that continuously monitors system state and detects configuration drift.
+Instead of only reading about endpoint security and system hardening, I wanted to actually build something that monitored my Windows system and told me when things changed.
+What began as a few PowerShell scripts slowly turned into a structured monitoring workflow.
 
-This repository contains the foundational PowerShell automation layer of the system.
+Now the project is evolving again — toward mapping technical monitoring into governance concepts like control validation and continuous evidence collection.
+This repository represents that progression.
 
 ---
 
-## Motivation
+## Why I Built This
 
-While preparing for CompTIA Network+ and Security+, I hardened my personal Windows system and wanted a way to:
+While hardening my own Windows 10 system, I kept asking:
 
-- Continuously monitor security posture
-- Detect unintended configuration drift
-- Track changes to services, scheduled tasks, and persistence mechanisms
-- Practice structured log analysis
-- Develop defensive monitoring workflows
+- How would I know if something changed later?
+- What would configuration drift actually look like?
+- Could I automate monitoring instead of manually checking?
+- How do blue teams think about baseline vs current state?
 
-The objective was not simply to automate scripts, but to build visibility and security reasoning into the system.
+So I built a system that:
 
-## Quick Start
+- Captures a baseline  
+- Takes scheduled snapshots  
+- Compares the two  
+- Generates structured drift reports  
+- Archives everything cleanly  
 
-Requirements:
-- Windows 10/11
-- PowerShell 5.1+
-- Run as Administrator (recommended for full visibility)
+This project helped me move from theory into practical defensive thinking.
 
-Example:
+---
+
+## What It Does (In Plain Terms)
+
+This project:
+
+- Collects system configuration data  
+- Stores a "known good" baseline  
+- Runs scheduled scans  
+- Detects changes in services, tasks, and persistence mechanisms  
+- Generates readable reports  
+- Keeps historical records  
+
+It is not a commercial EDR tool.  
+It is a structured learning project focused on understanding monitoring workflows.
+
+---
+
+## How It Works (Simple Flow)
+
+1. Create a baseline of your system.  
+2. Schedule recurring scans using Task Scheduler.  
+3. Compare new snapshots against the baseline.  
+4. Generate drift reports if changes are detected.  
+5. Archive older reports for history tracking.  
+
+Simple idea — structured execution.
+
+---
+
+## Getting Started
+
+### Option 1 – Download from GitHub
+
+1. Click the green **Code** button.  
+2. Select **Download ZIP**.  
+3. Extract the folder somewhere on your system (example: `C:\HomeEDR`).  
+
+---
+
+### Option 2 – Clone with Git
+
+Open Command Prompt, PowerShell, or Git Bash and run:
+
+```bash
+git clone https://github.com/YOUR-USERNAME/HomeEDR-PowerShell-Tools.git
+```
+
+---
+
+## Running a Script (Example: HealthSnapshot.ps1)
+
+1. Open PowerShell as Administrator.  
+2. Navigate to the scripts folder:
+
+```powershell
+cd C:\HomeEDR-PowerShell-Tools\scripts
+```
+
+3. Run:
+
+```powershell
 .\HealthSnapshot.ps1 -OutputDir C:\Reports
+```
 
-Output will be written to the specified directory. Utilizing the Task Scheduler, you're able to set up automation and consistent monitoring for each script. 
+If you receive an execution policy warning, run:
 
----
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
 
-## Core Design Model
+Then execute the script again.
 
-The system follows a structured lifecycle model:
-
-1. Baseline Creation  
-   An initial full system scan generates baseline reference files stored in:  
-   //baseline//
-
-2. Scheduled Snapshots  
-   Recurring scans are executed via Windows Task Scheduler and written to:  
-   //snapshots//
-
-3. Drift Detection  
-   Snapshot results are compared against the baseline.  
-   If changes are detected, drift reports are generated and written to:  
-   //alerts//
-
-4. Retention & Archiving  
-   Snapshots older than 30 days are automatically moved to:  
-   //archive/<year>/<month>//
-
-This structure allows clean separation between the trusted state, current state, and detected changes.
+Reports will be written to the directory you specify.
 
 ---
 
-## What This Project Demonstrates
+## Example Output
 
-- Windows security monitoring fundamentals  
-- Baseline vs. live state comparison logic  
-- Drift detection methodology  
-- Registry and persistence analysis  
-- Service configuration tracking  
-- Scheduled task auditing  
-- Security log summarization  
-- Automated lifecycle management  
-- Practical application of defensive security concepts  
+Sample sanitized reports are available in the `sample-output/` folder.
 
-This is not a commercial EDR product, but rather a structured educational and defensive security project inspired by endpoint monitoring principles.
-
----
-
-## Report Categories
-
-The system generates structured reports, including:
-
-- Health Snapshot  
-- Security Event Log Summary  
-- Installed Application Inventory  
-- Hardware Inventory  
-- Network Audit  
-- Services Drift Report  
-- Scheduled Tasks Drift Report  
-- Persistence Drift Report  
-- Consolidated Posture Drift Summary  
-
-All sample reports included in this repository have been sanitized to remove:
+Sensitive data has been removed, including:
 
 - Hostnames  
 - Usernames  
@@ -99,52 +120,35 @@ All sample reports included in this repository have been sanitized to remove:
 - MAC addresses  
 - Hardware serial numbers  
 - Personal file paths  
-- Version-specific internal identifiers  
+
+These samples show the structure and format of generated monitoring reports.
 
 ---
 
-## Design Philosophy
+## Project Evolution
 
-The goal was to:
+The project has grown in stages:
 
-- Build a monitoring workflow, not just scripts  
-- Interpret system telemetry  
-- Identify potential hardening gaps  
-- Think like a blue team analyst  
-- Create structured outputs that can be reasoned about  
+Scripts  
+→ Structured Reports  
+→ Scheduled Automation  
+→ Drift Detection  
+→ Governance-Oriented Framing (current direction)  
 
-Each script serves a defined purpose within the overall monitoring lifecycle.
-
----
-
-## Evolution of the Project
-
-The project evolved in stages:
-
-Scripts → Structured Reports → Scheduled Automation → Interpretation Layer (in progress)
-
-The long-term vision is to provide contextual feedback based on observed posture changes rather than raw output alone.
+The current focus is on exploring how technical monitoring outputs can support control validation and structured evidence tracking concepts.
 
 ---
 
-## Future Direction
+## What I’ve Learned So Far
 
-Planned enhancements include:
-
-- Rule-based posture scoring  
-- Best-practice recommendation engine  
-- Drift severity classification  
-- Automated hardening suggestions  
-- Consolidated interpretation layer  
-- GUI dashboard (future release / in-progress)  
+- Monitoring is more about structure than complexity.  
+- A baseline only matters if you protect and validate it.  
+- Drift detection requires context, not just differences.  
+- Automation is helpful, but interpretation is what creates value.  
 
 ---
 
 ## Disclaimer
 
-This project is for educational and defensive security purposes.  
-It is intended for personal lab and learning environments.
-
----
-
-
+This project is for educational and defensive security learning purposes.  
+It is intended for personal lab environments and experimentation.
