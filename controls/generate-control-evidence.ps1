@@ -70,7 +70,7 @@ function Read-MapYamlSimple {
 
   foreach ($line in $lines) {
     # normalize line endings just in case
-    $l = $line -replace "`r", ""
+    $l = $line.TrimEnd("`r")
 
     # skip blanks and comments
     if ($l -match '^\s*$') { continue }
