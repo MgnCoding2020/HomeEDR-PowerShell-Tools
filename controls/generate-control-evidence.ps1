@@ -70,7 +70,7 @@ function Read-MapYaml {
   $currentEvidence = $null
   $evidenceList = @()
 
-  foreach ($line in ($raw -split "`n")) {
+  foreach ($line in ($raw -split "n")) {
     $l = ($line -replace "`r", "")
 
     # Skip comments/blank lines
