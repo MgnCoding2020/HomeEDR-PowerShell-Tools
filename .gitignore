@@ -16,3 +16,6 @@ alerts/**
 
 # Optional: ignore all sample-output except explicitly tracked redacted samples
 # sample-output/raw/**
+
+# Raw lab evidence (do not commit)
+evidence/
