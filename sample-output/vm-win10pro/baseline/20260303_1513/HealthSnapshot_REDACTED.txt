@@ -1,0 +1,139 @@
+==== Health & Security Snapshot ====
+Host: REDACTED-HOST
+Time: 3/3/2026 3:21:08 PM
+Report: .\evidence\vm-win10pro\baseline\20260303_1513\HealthSnapshot_20260303_1521.txt
+Running as Admin: True
+------------------------------------
+
+
+## Windows Update
+----------------------------------------
+Pending updates: 1
+Pending update details (up to 10):
+  - 2025-11 Cumulative Update for Windows 10 Version 22H2 for x64-based Systems (KB5071959) [KB5071959]
+Reboot required for updates: False
+Last Windows Update activity (from history): 3/3/2026 10:41:12 PM
+Recently installed updates (last 5):
+  3/3/2026 12:00:00 AM  KB5071982  Security Update
+  3/2/2026 12:00:00 AM  KB5066791  Security Update
+  3/2/2026 12:00:00 AM  KB5066790  Security Update
+  3/2/2026 12:00:00 AM  KB5066130  Update
+  3/2/2026 12:00:00 AM  KB5072653  Security Update
+
+## System
+----------------------------------------
+OS: Microsoft Windows 10 Pro
+Version: 10.0.19045  Build: 19045
+Install Date: 3/2/2026 11:24:04 AM
+Last Boot: 3/3/2026 2:33:44 PM
+Uptime: 0 days 0h 48m
+
+## Disk
+----------------------------------------
+Drive C:  Free: 98.27 GB / 126.41 GB (77.7% free)
+
+## Windows Firewall
+----------------------------------------
+Profile: Domain
+  Enabled: True
+  DefaultInboundAction:  NotConfigured
+  DefaultOutboundAction: NotConfigured
+  NotifyOnListen:        True
+  AllowLocalFirewallRules: NotConfigured
+  AllowLocalIPsecRules:    NotConfigured
+Profile: Private
+  Enabled: True
+  DefaultInboundAction:  NotConfigured
+  DefaultOutboundAction: NotConfigured
+  NotifyOnListen:        True
+  AllowLocalFirewallRules: NotConfigured
+  AllowLocalIPsecRules:    NotConfigured
+Profile: Public
+  Enabled: True
+  DefaultInboundAction:  NotConfigured
+  DefaultOutboundAction: NotConfigured
+  NotifyOnListen:        True
+  AllowLocalFirewallRules: NotConfigured
+  AllowLocalIPsecRules:    NotConfigured
+Enabled inbound rules:  100
+Enabled outbound rules: 119
+
+## Windows Security / Defender
+----------------------------------------
+AMServiceEnabled: True
+AntivirusEnabled: True
+AntispywareEnabled: True
+NISEnabled: True
+RealTimeProtectionEnabled: True
+BehaviorMonitorEnabled: True
+OnAccessProtectionEnabled: True
+IoavProtectionEnabled: True
+IsTamperProtected: True
+AntivirusSignatureLastUpdated: 3/3/2026 8:04:26 AM
+
+## Recent Errors/Warnings (last 24h)
+----------------------------------------
+Log: System  (showing up to 50 most recent)
+  2026-03-03T14:39:21.1284891-08:00  ID 1801  Error  Microsoft-Windows-TPM-WMI  Secure Boot CA/keys need to be updated. This device signature information is included here. DeviceAttributes: FirmwareManufacturer:;FirmwareVersion:;OEMModelNum...
+  2026-03-03T14:38:01.7995715-08:00  ID 10016  Warning  Microsoft-Windows-DistributedCOM  The application-specific permission settings do not grant Local Launch permission for the COM Server application with CLSID Windows.SecurityCenter.SecurityAppBr...
+  2026-03-03T14:38:01.7995715-08:00  ID 10016  Warning  Microsoft-Windows-DistributedCOM  The application-specific permission settings do not grant Local Launch permission for the COM Server application with CLSID Windows.SecurityCenter.WscDataProtec...
+  2026-03-03T14:38:01.7995715-08:00  ID 10016  Warning  Microsoft-Windows-DistributedCOM  The application-specific permission settings do not grant Local Launch permission for the COM Server application with CLSID Windows.SecurityCenter.WscBrokerMana...
+  2026-03-03T14:34:59.9710743-08:00  ID 10016  Warning  Microsoft-Windows-DistributedCOM  The machine-default permission settings do not grant Local Activation permission for the COM Server application with CLSID {F87B28F1-DA9A-4F35-8EC0-800EFCF26B83...
+
+Log: Application  (showing up to 50 most recent)
+  2026-03-03T14:35:04.6584301-08:00  ID 8198  Error  Microsoft-Windows-Security-SPP  License Activation (slui.exe) failed with the following error code: hr=0x80004005 Command-line arguments: RuleId=31e71c49-8da7-4a2f-ad92-45d98a1c79ba;Action=Aut...
+  2026-03-03T14:35:01.4712579-08:00  ID 472  Warning  ESENT  taskhostw (5448,R,98) WebCacheLocal: The shadow header page of file C:\Users\REDACTED-USER\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.dat was damaged. The ...
+  2026-03-03T14:34:55.0491493-08:00  ID 8198  Error  Microsoft-Windows-Security-SPP  License Activation (slui.exe) failed with the following error code: hr=0x8007139F Command-line arguments: RuleId=31e71c49-8da7-4a2f-ad92-45d98a1c79ba;Action=Aut...
+  2026-03-03T14:34:54.2677406-08:00  ID 8198  Error  Microsoft-Windows-Security-SPP  License Activation (slui.exe) failed with the following error code: hr=0x8007139F Command-line arguments: RuleId=31e71c49-8da7-4a2f-ad92-45d98a1c79ba;Action=Aut...
+
+
+## Integrity Hashes (key files)
+----------------------------------------
+2D6BDFB341BE3A6234B24742377F93AA7C7CFB0D9FD64EFA9282C87852E57085  C:\Windows\System32\drivers\etc\hosts
+9785001B0DCF755EDDB8AF294A373C0B87B2498660F724E76C4D53F9C217C7A3  C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+4B9ACE449FC8E4A666FD7E1B650D22EC85A0DC405DDF4BA58A2B938C00CB896C  C:\Program Files\Windows Defender\MpCmdRun.exe
+
+## Network
+----------------------------------------
+Ethernet  REDACTED-IP  20
+Loopback Pseudo-Interface 1  REDACTED-IP  8
+
+## Listening Ports
+----------------------------------------
+REDACTED-IP:135  PID 952
+:::135  PID 952
+REDACTED-IP:139  PID 4
+:::445  PID 4
+REDACTED-IP:5040  PID 5948
+:::7680  PID 2908
+::1:42050  PID 6948
+REDACTED-IP:49664  PID 736
+:::49664  PID 736
+REDACTED-IP:49665  PID 588
+:::49665  PID 588
+REDACTED-IP:49666  PID 1184
+:::49666  PID 1184
+REDACTED-IP:49667  PID 1432
+:::49667  PID 1432
+:::49668  PID 2808
+REDACTED-IP:49668  PID 2808
+:::49670  PID 2944
+REDACTED-IP:49670  PID 2944
+:::49671  PID 704
+REDACTED-IP:49671  PID 704
+
+## Startup (high-level)
+----------------------------------------
+OneDrive  |  HKU\S-1-5-21-3062111221-3464357627-1910768012-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run  |  "C:\Users\REDACTED-USER\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+OneDriveSetup  |  HKU\S-1-5-20\SOFTWARE\Microsoft\Windows\CurrentVersion\Run  |  C:\Windows\SysWOW64\OneDriveSetup.exe /thfirstsetup
+OneDriveSetup  |  HKU\S-1-5-19\SOFTWARE\Microsoft\Windows\CurrentVersion\Run  |  C:\Windows\SysWOW64\OneDriveSetup.exe /thfirstsetup
+SecurityHealth  |  HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run  |  %windir%\system32\SecurityHealthSystray.exe
+
+## Service Health (selected)
+----------------------------------------
+wuauserv: Status=Running  StartType=Manual
+WinDefend: Status=Running  StartType=Automatic
+eventlog: Status=Running  StartType=Automatic
+BITS: Status=Stopped  StartType=Manual
+
+==== End of Snapshot ====
