@@ -1,70 +1,46 @@
-# Lab Environment
+# Lab Environment (RMF-aligned)
 
-## Why This Exists
+This repository is a Windows endpoint governance lab. The goal is to learn and demonstrate concepts in evidence collection, control mapping, and continuous monitoring using NIST RMF/NIST SP 800-53 as the organizing framework.
 
-Up to this point, all scripts and evidence artifacts were generated directly from my host machine during development.
-To make the project more realistic and better aligned with security assessment practices, I built a dedicated Windows 10 virtual machine using Hyper-V.
-This VM now acts as the "endpoint under evaluation."
+This is **not** an ATO package, and it does **not** claim “Authorization” decisions. It is a portfolio-safe lab showing how evidence would be collected and mapped in a real program.
 
----
+## Systems in Scope
 
-## Host System (Development)
+### Host
+- OS: Windows 10 (extended support)
+- Hyper-V: Enabled
 
-- Windows 10 (Extended Support)
-- 32 GB RAM
-- Hyper-V Manager enabled
+### Guest VM
+- Hyper-V VM: Windows 10 Pro (Generation 1)
+- Patch posture: Fully updated at time of baseline
+- Baseline checkpoint: `Baseline-Clean-Patched.`
 
-The host is used for:
-- Script development
-- GitHub repo management
-- Control mapping updates
-- Reviewing generated artifacts
+## Evidence Collection Approach
 
-The host is not the intended long-term assessment target.
+Scripts in `scripts/` are used to collect endpoint posture artifacts (configuration, services/tasks, network posture, software inventory, and event log summaries).
 
----
+The lab uses two evidence tiers:
 
-## Virtual Machine (Assessment Endpoint)
+### 1) Raw evidence (not committed)
+- Location: `evidence/`
+- Purpose: Full-fidelity outputs produced from the host/VM.
+- Policy: **Not committed to GitHub** to avoid exposing hostnames, usernames, installed software inventories, IPs, or event log content.
 
-- Name: HomeEDR-lab-02
-- Hyper-V Generation: Gen 1
-- RAM: 8 GB
-- CPU: 2 vCPU
-- OS: Windows 10 Pro 22H2 (x64)
-- Network: Hyper-V Default Switch (NAT)
+### 2) Sanitized sample evidence (committed)
+- Location: `sample-output/`
+- Purpose: Redacted examples showing what evidence artifacts look like and how they support control mapping.
+- Policy: Safe for public sharing (redacted identifiers, shortened logs, removed environment-specific values).
 
-The VM was:
-1. Freshly installed
-2. Fully patched via Windows Update
-3. Verified with Defender enabled
-4. Restart validated
+## Continuous Monitoring (Planned / Lab Scope)
 
-This VM represents a controlled Windows workstation that can be modified, tested, and reverted without impacting the host system.
+This lab may use:
+- Sysmon (Windows event telemetry)
+- Wazuh (agent + manager) as a monitoring plane
 
----
+Monitoring integrations are documented as **RMF Step 6 (Monitor)** learning artifacts and kept intentionally small (a few use-cases, not a full SOC build).
 
-## Why Separate Host and VM?
+## Control Mapping
 
-Running scripts only on the host does not simulate real endpoint assessment.
+Control-to-evidence mapping is maintained in `controls/` and is used to generate `CONTROL_EVIDENCE.md`.
 
-By cloning the repo inside the VM and running the same PowerShell scripts there:
-
-- HealthSnapshot.ps1 pulls VM-specific data
-- InstalledApps-Inventory.ps1 reflects VM software state
-- Network-Audit.ps1 reflects VM network configuration
-
-Outputs generated inside the VM will differ from the host, which makes comparisons possible.
-
----
-
-## Next Phase
-
-The plan is to:
-
-- Clone the repository inside the VM
-- Run scripts from the VM
-- Store VM-generated artifacts separately
-- Compare baseline vs modified states
-- Expand control mappings as evidence becomes endpoint-driven
-
-This moves the project from development-only testing to structured endpoint assessment.
+Mappings are written as “what artifact supports what control objective” for this lab scope, not as claims of enterprise-wide compliance.
