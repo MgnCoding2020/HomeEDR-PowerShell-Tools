@@ -1,35 +1,11 @@
-# Plan of Action & Milestones (POA&M) (Draft)
+## Plan of Action & Milestones (POA&M)
 
-This document tracks planned improvements, tied back to risks and evidence reliability.
+Findings in this document are derived from baseline artifacts collected in the `vm-win10pro` lab environment.
 
-## Status
-- Planned
-- In Progress
-- Complete
-
----
-
-## POAM-001: Baseline Integrity Validation
-
-**Related risk(s):** R-001  
-**Goal:** Prevent undetected baseline tampering.
-
-**Planned work:**
-- Create baseline manifest with hashes
-- Validate manifest before drift comparisons
-- Document baseline maintenance process
-
-**Status:** Planned
-
----
-
-## POAM-002: Evidence Collection Heartbeat
-
-**Related risk(s):** R-002  
-**Goal:** Detect missed scheduled runs.
-
-**Planned work:**
-- Add a small “last-run” marker file per script
-- Add alert when evidence is stale
-
-**Status:** Planned
+| POA&M ID | Control                     | Finding                                                                     | Risk                                                               | Remediation Plan                                                                | Owner     | Target Date | Status  | Evidence                  |
+| -------- | --------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------- | --------- | ----------- | ------- | ------------------------- |
+| POAM-001 | CM-6 Configuration Settings | Baseline configuration integrity verification not automated.                | Unauthorized baseline modification may go undetected.              | Implement baseline manifest with file hashes and validation before comparisons. | Lab Owner | Planned     | Planned | HealthSnapshot baseline   |
+| POAM-002 | CA-7 Continuous Monitoring  | Evidence collection scripts currently run manually.                         | Missed evidence runs could result in monitoring gaps.              | Implement scheduled evidence collection with last-run verification marker.      | Lab Owner | Planned     | Planned | Baseline artifact runs    |
+| POAM-003 | SI-4 System Monitoring      | Endpoint telemetry limited to default Windows logging.                      | Limited visibility into process execution and suspicious activity. | Deploy Sysmon with baseline configuration and validate event generation.        | Lab Owner | Planned     | Planned | EventLogBaseline artifact |
+| POAM-004 | AU-6 Audit Review           | Security logs collected locally but not centrally monitored.                | Security events require manual review and may be missed.           | Deploy Wazuh agent and forward logs to centralized monitoring.                  | Lab Owner | Planned     | Planned | EventLogBaseline artifact |
+| POAM-005 | CM-7 Least Functionality    | Network baseline shows active listening services without documented review. | Unnecessary services increase attack surface.                      | Review listening services and disable unnecessary components.                   | Lab Owner | Planned     | Planned | NetworkBaseline artifact  |
