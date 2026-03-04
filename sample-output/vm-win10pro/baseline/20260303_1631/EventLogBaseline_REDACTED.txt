@@ -1,0 +1,100 @@
+Home EDR Dashboard - Event Logs Analysis
+Host:            REDACTED-HOST
+Generated:       3/3/2026 REDACTED-IPV6 PM
+HoursBack:       24
+MaxEventsPerLog: 5000
+RunningAsAdmin:  True
+Mode:            HoursBack
+Logs:            Security, System, Application
+
+==== Overview ====
+Time window start: 3/2/2026 REDACTED-IPV6 PM
+
+==== Security Summary ====
+SecurityLogReadable: True
+Event counts by LevelDisplayName:
+
+Name        Count
+----        -----
+Information  5000
+
+
+
+Top Event IDs (top 10):
+
+Name Count
+---- -----
+4907  3921
+5379   294
+4624   293
+4672   278
+4799    64
+4798    35
+4688    33
+4648    18
+5058     8
+5061     8
+
+
+
+
+==== System Summary ====
+Event counts by LevelDisplayName:
+
+Name        Count
+----        -----
+Error          29
+Information  1333
+Warning       241
+
+
+
+Top Event IDs (top 10):
+
+Name Count
+---- -----
+44     448
+16     263
+153    233
+6       81
+43      62
+19      59
+7040    38
+1       26
+98      22
+12      19
+
+
+
+
+==== Application Summary ====
+Event counts by LevelDisplayName:
+
+Name        Count
+----        -----
+Error          14
+Information  1745
+Warning        12
+
+
+
+Top Event IDs (top 10):
+
+Name  Count
+----  -----
+1004   1234
+1034    128
+16384    49
+16394    48
+0        37
+1001     37
+15       28
+1003     26
+4097     10
+9027     10
+
+
+
+
+State written to:  .\evidence\vm-win10pro\baseline\20260303_1631\state\EventLogMarkers.json
+Report written to: .\evidence\vm-win10pro\baseline\20260303_1631\SecurityReport_20260303_163119.txt
