@@ -1,0 +1,13 @@
+Beacon Installed Apps Inventory (read-only)
+Generated: 3/3/2026 4:21:09 PM
+RunAs: REDACTED-HOST\REDACTED-USER
+
+Total classic installs (registry): 8
+Third-party (heuristic): 3
+
+Top 25 third-party installs (heuristic):
+ - Git  2.53.0
+ - Mozilla Firefox (x64 en-US)  148.0
+ - Mozilla Maintenance Service  148.0
+
+Appx packages: 105
