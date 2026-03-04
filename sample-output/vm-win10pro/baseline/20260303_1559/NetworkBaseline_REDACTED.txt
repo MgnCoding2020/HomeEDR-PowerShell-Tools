@@ -1,0 +1,212 @@
+Home EDR Dashboard - Network Audit
+Generated: 3/3/2026 REDACTED-IPV6 PM
+Computer:  REDACTED-HOST
+User:      REDACTED-USER
+
+==== IP Configuration (ipconfig /all) ====
+ipconfig /all:
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : REDACTED-HOST
+   Primary Dns Suffix  . . . . . . . : 
+   Node Type . . . . . . . . . . . . : Mixed
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+   DNS Suffix Search List. . . . . . : mshome.net
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . : mshome.net
+   Description . . . . . . . . . . . : Microsoft Hyper-V Network Adapter
+   Physical Address. . . . . . . . . : REDACTED-MAC
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : REDACTED-IPV6%4(Preferred) 
+   IPv4 Address. . . . . . . . . . . : REDACTED-IP(Preferred) 
+   Subnet Mask . . . . . . . . . . . : REDACTED-IP
+   Lease Obtained. . . . . . . . . . : Tuesday, March 3, 2026 REDACTED-IPV6 PM
+   Lease Expires . . . . . . . . . . : Wednesday, March 4, 2026 REDACTED-IPV6 PM
+   Default Gateway . . . . . . . . . : REDACTED-IP
+   DHCP Server . . . . . . . . . . . : REDACTED-IP
+   DHCPv6 IAID . . . . . . . . . . . : 100668765
+   DHCPv6 Client DUID. . . . . . . . : REDACTED-MAC-REDACTED-MAC-84-01
+   DNS Servers . . . . . . . . . . . : REDACTED-IP
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+
+==== Network Adapters ====
+Get-NetAdapter:
+
+Name     InterfaceDescription              Status LinkSpeed MacAddress       
+----     --------------------              ------ --------- ----------       
+Ethernet Microsoft Hyper-V Network Adapter Up     10 Gbps   REDACTED-MAC
+
+
+
+
+==== IP Addresses ====
+Get-NetIPAddress:
+
+InterfaceAlias              AddressFamily IPAddress                   PrefixLength
+--------------              ------------- ---------                   ------------
+Ethernet                             IPv4 REDACTED-IP                          20
+Ethernet                             IPv6 REDACTED-IPV6%4           64
+Loopback Pseudo-Interface 1          IPv4 REDACTED-IP                              8
+Loopback Pseudo-Interface 1          IPv6 REDACTED-IPV6                                  128
+
+
+
+
+==== Route Table (default routes) ====
+Default routes (REDACTED-IP/0):
+
+InterfaceAlias NextHop    RouteMetric
+-------------- -------    -----------
+Ethernet       REDACTED-IP           0
+
+
+
+
+==== Active TCP Connections ====
+Get-NetTCPConnection (top 50):
+
+LocalAddress LocalPort RemoteAddress RemotePort       State OwningProcess
+------------ --------- ------------- ----------       ----- -------------
+REDACTED-IP          49668 REDACTED-IP                0      Listen          2808
+REDACTED-IP          49667 REDACTED-IP                0      Listen          1432
+REDACTED-IP          49670 REDACTED-IP                0      Listen          2944
+REDACTED-IP            135 REDACTED-IP                0      Listen           952
+REDACTED-IP          49671 REDACTED-IP                0      Listen           704
+REDACTED-IP           5040 REDACTED-IP                0      Listen          5948
+REDACTED-IP       139 REDACTED-IP                0      Listen             4
+REDACTED-IP          49664 REDACTED-IP                0      Listen           736
+REDACTED-IP          49666 REDACTED-IP                0      Listen          1184
+REDACTED-IP          49665 REDACTED-IP                0      Listen           588
+REDACTED-IPV6                 135 REDACTED-IPV6                     0      Listen           952
+REDACTED-IPV6               49667 REDACTED-IPV6                     0      Listen          1432
+REDACTED-IPV6               49668 REDACTED-IPV6                     0      Listen          2808
+REDACTED-IPV6               49664 REDACTED-IPV6                     0      Listen           736
+REDACTED-IPV6              42050 REDACTED-IPV6                     0      Listen          6948
+REDACTED-IPV6               49665 REDACTED-IPV6                     0      Listen           588
+REDACTED-IPV6               49666 REDACTED-IPV6                     0      Listen          1184
+REDACTED-IPV6                 445 REDACTED-IPV6                     0      Listen             4
+REDACTED-IPV6               49670 REDACTED-IPV6                     0      Listen          2944
+REDACTED-IPV6                7680 REDACTED-IPV6                     0      Listen          2908
+REDACTED-IPV6               49671 REDACTED-IPV6                     0      Listen           704
+REDACTED-IP     49685 REDACTED-IP        443 Established          3116
+REDACTED-IP      7680 REDACTED-IP         51908    TimeWait             0
+REDACTED-IP      7680 REDACTED-IP         51888    TimeWait             0
+REDACTED-IP      7680 REDACTED-IP         51893    TimeWait             0
+REDACTED-IP          49889 REDACTED-IP                0       Bound          7800
+REDACTED-IP          49891 REDACTED-IP                0       Bound          7800
+REDACTED-IP          49890 REDACTED-IP                0       Bound          7800
+REDACTED-IP          49892 REDACTED-IP                0       Bound          7800
+REDACTED-IP          49894 REDACTED-IP                0       Bound          7800
+REDACTED-IP          49893 REDACTED-IP                0       Bound          7800
+REDACTED-IP          49685 REDACTED-IP                0       Bound          3116
+REDACTED-IP          49895 REDACTED-IP                0       Bound          7800
+REDACTED-IP          49885 REDACTED-IP                0       Bound          7800
+REDACTED-IP          49888 REDACTED-IP                0       Bound          7800
+REDACTED-IP          49887 REDACTED-IP                0       Bound          7800
+
+
+
+
+==== Listening TCP Ports ====
+Get-NetTCPConnection -State Listen:
+
+LocalAddress LocalPort OwningProcess
+------------ --------- -------------
+REDACTED-IPV6                 135           952
+REDACTED-IP            135           952
+REDACTED-IP       139             4
+REDACTED-IPV6                 445             4
+REDACTED-IP           5040          5948
+REDACTED-IPV6                7680          2908
+REDACTED-IPV6              42050          6948
+REDACTED-IPV6               49664           736
+REDACTED-IP          49664           736
+REDACTED-IPV6               49665           588
+REDACTED-IP          49665           588
+REDACTED-IPV6               49666          1184
+REDACTED-IP          49666          1184
+REDACTED-IPV6               49667          1432
+REDACTED-IP          49667          1432
+REDACTED-IPV6               49668          2808
+REDACTED-IP          49668          2808
+REDACTED-IPV6               49670          2944
+REDACTED-IP          49670          2944
+REDACTED-IPV6               49671           704
+REDACTED-IP          49671           704
+
+
+
+
+==== Running Processes for Listening Ports (best-effort) ====
+Process names for listening ports:
+
+LocalPort OwningProcess ProcessName          
+--------- ------------- -----------          
+      135           952 svchost              
+      139             4 System               
+      445             4 System               
+     5040          5948 svchost              
+     7680          2908 svchost              
+    42050          6948 OneDrive.Sync.Service
+    49664           736 lsass                
+    49665           588 wininit              
+    49666          1184 svchost              
+    49667          1432 svchost              
+    49668          2808 spoolsv              
+    49670          2944 svchost              
+    49671           704 services             
+
+
+
+
+==== DNS Client Cache (top 50) ====
+Get-DnsClientCache:
+
+
+==== DNS Server Addresses ====
+Get-DnsClientServerAddress:
+
+InterfaceAlias              AddressFamily ServerAddresses                                       
+--------------              ------------- ---------------                                       
+Ethernet                                2 {REDACTED-IP}                                          
+Ethernet                               23 {}                                                    
+Loopback Pseudo-Interface 1             2 {}                                                    
+Loopback Pseudo-Interface 1            23 {REDACTED-IPV6, REDACTED-IPV6, REDACTED-IPV6}
+
+
+
+
+==== Firewall Profiles ====
+Get-NetFirewallProfile:
+
+Name    Enabled DefaultInboundAction DefaultOutboundAction
+----    ------- -------------------- ---------------------
+Domain     True        NotConfigured         NotConfigured
+Private    True        NotConfigured         NotConfigured
+Public     True        NotConfigured         NotConfigured
+
+
+
+
+==== Wi-Fi Profiles (netsh wlan show profiles) ====
+Wi-Fi profiles:
+The Wireless AutoConfig Service (wlansvc) is not running.
+
+
+==== Summary ====
+Basic network summary:
+
+
+AdaptersUp : 
+IPEntries  : 4
+
+
+
+
+Done.
